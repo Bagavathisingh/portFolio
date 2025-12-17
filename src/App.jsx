@@ -130,7 +130,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-slate-200 overflow-x-hidden">
-      {/* Custom Popup Modal */}
+
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div className="bg-slate-800 border border-slate-600 rounded-2xl shadow-2xl p-8 max-w-sm w-full text-center animate-fadeIn">
@@ -151,6 +151,7 @@ const Portfolio = () => {
           </div>
         </div>
       )}
+      
       <style jsx>{`
         @keyframes float {
           0%,
