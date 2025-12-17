@@ -39,6 +39,14 @@ const Portfolio = () => {
       liveLink: "https://weather-motion.vercel.app",
       githubLink: "https://github.com/Bagavathisingh/weatherApp",
     },
+        {
+      title: "CyberBoy Chatbot",
+      description:
+        "yberBoy is an intelligent chatbot designed to help with cybersecurity queries, digital safety, and tech-related solutions.",
+      tech: ["React.js", "Express.js", "OpenRouter API", "Tailwind CSS","MangoDB"],
+      liveLink: "cyberboybot.netlify.app",
+      githubLink: "https://github.com/Bagavathisingh/cyberBoy",
+    },
   ];
 
   const skills = [
