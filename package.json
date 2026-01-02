@@ -10,10 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/outfit": "^5.2.8",
     "@tailwindcss/vite": "^4.1.13",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
     "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
