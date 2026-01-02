@@ -13,8 +13,8 @@ const Contact = () => {
                 </h2>
 
                 <div className="flex flex-col md:flex-row gap-8 w-full max-w-2xl">
-                    <a href="mailto:hello@bagavathisingh.dev" className="flex-1 group">
-                        <div className="border-grid p-8 hover:bg-neon hover:text-black transition-all h-full flex flex-col justify-between min-h-[200px]">
+                    <a href="mailto:bagavathisingh5@gmail.com" className="flex-1 group">
+                        <div className="border-grid p-8 hover-neon transition-all h-full flex flex-col justify-between min-h-[200px]">
                             <span className="font-mono text-xs opacity-60">EMAIL</span>
                             <div className="flex justify-between items-end">
                                 <span className="text-xl font-bold">SEND MAIL</span>
@@ -22,7 +22,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="#" className="flex-1 group">
+                    <a href="https://www.linkedin.com/in/bagavathi-singh" className="flex-1 group" target="_blank" rel="noopener noreferrer">
                         <div className="border-grid p-8 hover:bg-white hover:text-black transition-all h-full flex flex-col justify-between min-h-[200px]">
                             <span className="font-mono text-xs opacity-60">SOCIAL</span>
                             <div className="flex justify-between items-end">

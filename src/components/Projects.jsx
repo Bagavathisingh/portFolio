@@ -46,7 +46,7 @@ const Projects = () => {
 
                 {/* Sticky Header Left */}
                 <div className="md:col-span-2 p-8 border-r-grid flex flex-row md:flex-col justify-between items-start md:items-start bg-[#0a0a0a] z-10">
-                    <h2 className="text-4xl font-black writing-vertical-rl md:transform md:rotate-180 rotate-0">PROJECTS</h2>
+                    <h2 className="text-4xl font-black writing-vertical-rl">PROJECTS</h2>
 
                 </div>
 
