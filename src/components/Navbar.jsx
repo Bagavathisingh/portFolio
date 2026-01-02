@@ -49,7 +49,6 @@ const Navbar = () => {
         </button>
       </motion.nav>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
