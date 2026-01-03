@@ -10,7 +10,6 @@
     --color-blueprint-border: #262626;
     --color-blueprint-text: #e5e5e5;
     --color-blueprint-neon: #ccff00;
-    /* Acid Lime for high contrast pop */
     --color-blueprint-sub: #a1a1aa;
 }
 
@@ -42,8 +41,6 @@ h6 {
     letter-spacing: -0.02em;
 }
 
-/* Blueprint Grid Background */
-/* Blueprint Grid Background */
 .bg-grid {
     background-size: 50px 50px;
     background-image:

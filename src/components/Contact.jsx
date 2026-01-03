@@ -36,7 +36,6 @@ const Contact = () => {
 
             </div>
 
-            {/* Background Decor */}
             <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
         </section>
     );
