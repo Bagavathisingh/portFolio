@@ -4,16 +4,32 @@ import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 
 const projects = [
     {
-        title: "E-LEARNING PLATFORM",
+        title: "BUGZX_MOTION",
         id: "PRJ-01",
+        description: "Built bugzx-motion, an experimental UI and motion framework for React and Next.js focused on motion-first components and clean developer experience.",
+        tech: ["Next.js 16 (App Router)", "TypeScript", "Tailwind CSS 4" , "Radix UI" , "Lucide React"],
+        live: "https://website.bugzx-motion.pages.dev",
+        github: "https://github.com/Bagavathisingh/bugzx-motion"
+    },
+    {
+        title: "E-LEARNING PLATFORM",
+        id: "PRJ-02",
         description: "A comprehensive LMS with video streaming, progress tracking, and interactive quizzes.",
         tech: ["Next.js", "TypeScript", "Prisma"],
         live: "https://metastudy.vercel.app",
         github: "https://github.com/Bagavathisingh/metalearn"
     },
     {
+        title: "CYBERBOY CHATBOT",
+        id: "PRJ-03",
+        description: "Intelligent chatbot for cybersecurity queries and tech solutions.",
+        tech: ["React", "OpenRouter", "MongoDB"],
+        live: "https://cyberboybot.netlify.app",
+        github: "https://github.com/Bagavathisingh/cyberBoy"
+    },
+    {
         title: "TASK MANAGER",
-        id: "PRJ-02",
+        id: "PRJ-04",
         description: "Real-time collaboration tool with drag-and-drop kanban boards.",
         tech: ["React", "Firebase", "Tailwind"],
         live: "https://task-manger-rust.vercel.app/",
@@ -21,20 +37,12 @@ const projects = [
     },
     {
         title: "WEATHER DASHBOARD",
-        id: "PRJ-03",
+        id: "PRJ-05",
         description: "Beautiful data visualization of weather analytics across the globe.",
         tech: ["Vue.js", "D3.js", "OpenWeather"],
         live: "https://weather-motion.vercel.app",
         github: "https://github.com/Bagavathisingh/weatherApp"
     },
-    {
-        title: "CYBERBOY CHATBOT",
-        id: "PRJ-04",
-        description: "Intelligent chatbot for cybersecurity queries and tech solutions.",
-        tech: ["React", "OpenRouter", "MongoDB"],
-        live: "https://cyberboybot.netlify.app",
-        github: "https://github.com/Bagavathisingh/cyberBoy"
-    }
 ];
 
 const Projects = () => {

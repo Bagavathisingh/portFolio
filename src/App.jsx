@@ -10,10 +10,8 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <div className="relative min-h-screen bg-[#0a0a0a] text-[#e5e5e5] selection:bg-neon selection:text-black">
-      {/* Blueprint Grid Background */}
       <div className="bg-grid" />
 
-      {/* Main Content */}
       <div className="relative z-10 pt-16">
         <Navbar />
         <main>
