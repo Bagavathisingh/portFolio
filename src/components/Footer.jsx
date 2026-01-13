@@ -36,7 +36,7 @@ const Footer = () => {
                         {[
                             { name: 'GitHub', url: 'https://github.com/Bagavathisingh' },
                             { name: 'LinkedIn', url: 'https://linkedin.com/in/bagavathi-singh' },
-                            { name: 'Twitter', url: '#' },
+                            { name: 'Twitter', url: 'https://x.com/BagavathiSingh' },
                             { name: 'Email', url: 'mailto:bagavathisingh5@gmail.com' }
                         ].map((item) => (
                             <li key={item.name}>
