@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp,
+    initializeFirestore
+} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
@@ -11,19 +17,29 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = initializeFirestore(app, {
+    experimentalForceLongPolling: true,
+});
 
 export const sendContactMessage = async (data) => {
+
+    const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error("TRANSMISSION_TIMEOUT")), 10000);
+    });
+
     try {
-        const docRef = await addDoc(collection(db, "messages"), {
+        const messagePromise = addDoc(collection(db, "messages"), {
             ...data,
             timestamp: serverTimestamp(),
         });
+
+        const docRef = await Promise.race([messagePromise, timeoutPromise]);
+
         return { success: true, id: docRef.id };
     } catch (error) {
-        console.error("Error adding document: ", error);
-        return { success: false, error };
+        return { success: false };
     }
 };
 

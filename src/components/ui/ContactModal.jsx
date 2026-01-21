@@ -16,18 +16,24 @@ const ContactModal = ({ isOpen, onClose }) => {
         e.preventDefault();
         setStatus('loading');
 
-        const result = await sendContactMessage(formData);
+        try {
+            const result = await sendContactMessage(formData);
 
-        if (result.success) {
-            setStatus('success');
-            setTimeout(() => {
-                onClose();
-                setStatus('idle');
+            if (result.success) {
+                setStatus('success');
                 setFormData({ name: '', email: '', requirements: '', message: '' });
-            }, 2000);
-        } else {
+
+                setTimeout(() => {
+                    onClose();
+                    setStatus('idle');
+                }, 1500);
+            } else {
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 4000);
+            }
+        } catch (err) {
             setStatus('error');
-            setTimeout(() => setStatus('idle'), 3000);
+            setTimeout(() => setStatus('idle'), 4000);
         }
     };
 
