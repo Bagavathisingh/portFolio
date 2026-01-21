@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code2, Terminal, Cpu } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Terminal } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const location = useLocation();
 
   const navLinks = [
-    { name: 'INDEX', href: '#home' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'PROJECTS', href: '#projects' },
-    { name: 'CONTACT', href: '#contact' },
+    { name: 'INDEX', href: '/' },
+    { name: 'ABOUT', href: '/#about' },
+    { name: 'PROJECTS', href: '/#projects' },
+    { name: 'CONTACT', href: '/#contact' },
+    { name: 'WORKFLOW', href: '/process' },
   ];
 
   return (
     <>
-      {/* Top Status Bar */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -23,21 +24,26 @@ const Navbar = () => {
       >
         <div className="flex items-center gap-4">
           <div className="w-3 h-3 bg-neon rounded-none animate-pulse" />
-          <span className="font-bold text-xl tracking-tighter">BAGAVATHISINGH</span>
+          <Link to="/" className="font-bold text-xl tracking-tighter hidden sm:block">BAGAVATHISINGH</Link>
+          <Link to="/" className="md:hidden font-bold text-xl tracking-tighter">BS</Link>
+          <div className="border-grid px-2 py-1 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400">OPEN FOR WORK</span>
+          </div>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center h-full">
-          {navLinks.map((link, i) => (
-            <a
+          {navLinks.map((link) => (
+            <Link
               key={link.name}
-              href={link.href}
-              className="group relative h-full px-8 flex items-center border-l-grid hover:bg-white hover:text-black transition-colors"
+              to={link.href}
+              className={`group relative h-full px-8 flex items-center border-l-grid hover:bg-white hover:text-black transition-colors ${location.pathname === link.href ? 'bg-white text-black' : ''
+                }`}
             >
               <span className="font-bold tracking-wide">{link.name}</span>
-            </a>
+            </Link>
           ))}
-
         </div>
 
         {/* Mobile Toggle */}
@@ -59,14 +65,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="py-6 text-center hover:bg-neon hover:text-black transition-colors font-bold text-xl border-b-grid last:border-b-0"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

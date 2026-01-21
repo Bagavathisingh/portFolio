@@ -56,7 +56,6 @@ const Footer = () => {
                 <span className="animate-pulse text-neon">● ONLINE</span>
             </div>
 
-            {/* Big Background Text */}
             <div className="absolute -bottom-10 left-0 w-full overflow-hidden pointer-events-none opacity-5">
                 <h1 className="text-[15vw] font-black whitespace-nowrap leading-none text-white">
                     BAGAVATHISINGH

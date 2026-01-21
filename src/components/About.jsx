@@ -21,6 +21,8 @@ const About = () => {
                     </p>
                     <p className="text-lg text-gray-400 font-mono leading-relaxed">
                         Specializing in building scalable web applications that prioritize user experience without sacrificing performance.
+                        <br /><br />
+                        <span className="text-neon">Available for Freelance Projects:</span> Whether you need a landing page, a full-stack web app, or a mobile application, I deliver high-quality code and modern designs tailored to your needs.
                     </p>
                 </div>
 
@@ -44,7 +46,7 @@ const About = () => {
                             <div className="bg-neon h-full w-[85%] animate-pulse" />
                         </div>
                         <p className="font-mono text-xs mt-4 text-gray-400">
-                            CURRENTLY OPTIMIZING ALGORITHMS AND LEARNING RUST.
+                            OPEN FOR FREELANCE PROJECTS & NEW OPPORTUNITIES.
                         </p>
                     </div>
                 </div>
