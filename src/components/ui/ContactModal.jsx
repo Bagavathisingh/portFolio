@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Loader2, CheckCircle2 } from 'lucide-react';
-import { sendContactMessage } from '../../../firebase';
+import { sendContactMessage } from '../../firebase';
 
 const ContactModal = ({ isOpen, onClose }) => {
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
