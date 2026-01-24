@@ -55,7 +55,7 @@ const About = () => {
                         <img
                             src="/profile.png"
                             alt="Bagavathisingh Profile"
-                            className="w-full h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100 opacity-60 group-hover:opacity-100"
+                            className="w-full h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-1000 scale-130 group-hover:scale-110 opacity-60 group-hover:opacity-100"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-transparent to-transparent hidden md:block" />
                     </div>
