@@ -7,8 +7,8 @@ const projects = [
         title: "BUGZX_MOTION",
         id: "PRJ-01",
         image: "/projects/bugzx_motion.png",
-        description: "Built bugzx-motion, an experimental UI and motion framework for React and Next.js focused on motion-first components and clean developer experience.",
-        tech: ["Next.js 16", "TypeScript", "Tailwind 4", "Radix UI"],
+        description: "A specialized UI and motion library for React and Next.js, providing performant, motion-ready components for modern web applications.",
+        tech: ["Next.js", "TypeScript", "Tailwind", "Motion"],
         live: "https://bugzx-motion.netlify.app",
         github: "https://github.com/Bagavathisingh/bugzx-motion"
     },
@@ -16,8 +16,8 @@ const projects = [
         title: "E-LEARNING PLATFORM",
         id: "PRJ-02",
         image: "/projects/elearning.png",
-        description: "A comprehensive LMS with video streaming, progress tracking, and interactive quizzes.",
-        tech: ["Next.js", "TypeScript", "Prisma", "Tailwind"],
+        description: "A full-featured management system for online courses, featuring video content delivery, progress tracking, and student assessments.",
+        tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
         live: "https://metastudy.vercel.app",
         github: "https://github.com/Bagavathisingh/metalearn"
     },
@@ -25,8 +25,8 @@ const projects = [
         title: "CYBERBOY CHATBOT",
         id: "PRJ-03",
         image: "/projects/cyberboy.png",
-        description: "Intelligent chatbot for cybersecurity queries and tech solutions.",
-        tech: ["React", "OpenRouter", "MongoDB", "Framer"],
+        description: "An automated assistant built to handle technical queries and provide information on software solutions using custom LLM configurations.",
+        tech: ["React", "OpenRouter", "Node.js", "MongoDB"],
         live: "https://cyberboybot.netlify.app",
         github: "https://github.com/Bagavathisingh/cyberBoy"
     },
@@ -34,26 +34,26 @@ const projects = [
         title: "TASK MANAGER",
         id: "PRJ-04",
         image: "/projects/task_manager.png",
-        description: "Real-time collaboration tool with drag-and-drop kanban boards.",
+        description: "A collaborative project management application with real-time status updates and drag-and-drop workspace organization.",
         tech: ["React", "Firebase", "Tailwind", "Dnd-Kit"],
         live: "https://task-manger-rust.vercel.app/",
         github: "https://github.com/Bagavathisingh/task-Manger"
     },
     {
-        title: "WEATHER DASHBOARD",
+        title: "WEATHER ANALYTICS",
         id: "PRJ-05",
         image: "/projects/weather.png",
-        description: "Beautiful data visualization of weather analytics across the globe.",
+        description: "A data-driven dashboard that visualizes global weather conditions using D3.js and real-time API integration.",
         tech: ["Vue.js", "D3.js", "OpenWeather", "Vite"],
         live: "https://weather-motion.vercel.app",
         github: "https://github.com/Bagavathisingh/weatherApp"
     },
     {
-        title: "CLI_CHAT",
+        title: "SECURE_CHAT",
         id: "PRJ-06",
         image: "/projects/cli_chat.png",
-        description: "Secure terminal chat with AES-128-CBC on-device encryption, using WebSocket bidirectional relay and deterministic 16-byte KDF key derivation.",
-        tech: ["WebSocket (WS)", "AES-128-CBC", "Passphrase KDF", "Node.js", "Render Cloud"],
+        description: "A terminal-style messaging tool featuring end-to-end encryption and WebSocket-based bidirectional communication.",
+        tech: ["Node.js", "WebSockets", "Crypto API", "Render"],
         live: "https://bugzx-chat.vercel.app",
         github: "https://github.com/Bagavathisingh/CLI_chat"
     },
@@ -66,7 +66,7 @@ const Projects = () => {
         <section id="projects" className="py-0 border-b-grid bg-[#0a0a0a] relative overflow-hidden">
             <div className="flex flex-col min-h-screen">
 
-                {/* Slim Header */}
+
                 <div className="p-6 border-b-grid flex items-center justify-between bg-[#0b0b0b] z-10">
                     <div className="flex items-center gap-4">
                         <div className="w-1.5 h-1.5 bg-neon rounded-full" />
@@ -120,7 +120,7 @@ const Projects = () => {
                                     </div>
                                 </div>
 
-                                {/* Ultra-Smooth Slim Expansion */}
+
                                 <motion.div
                                     initial={{ width: 0 }}
                                     animate={{

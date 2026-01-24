@@ -23,7 +23,9 @@ const Navbar = () => {
         className="fixed top-0 w-full z-50 bg-[#0a0a0a] border-b-grid h-16 flex items-center justify-between px-6"
       >
         <div className="flex items-center gap-4">
-          <div className="w-3 h-3 bg-neon rounded-none animate-pulse" />
+          <div className="relative group">
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-neon border border-[#0a0a0a]" />
+          </div>
           <Link to="/" className="font-bold text-xl tracking-tighter hidden sm:block">BAGAVATHISINGH</Link>
           <Link to="/" className="md:hidden font-bold text-xl tracking-tighter">BS</Link>
           <div className="border-grid px-2 py-1 flex items-center gap-2">
@@ -32,7 +34,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Menu */}
+
         <div className="hidden md:flex items-center h-full">
           {navLinks.map((link) => (
             <Link
@@ -46,7 +48,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Toggle */}
+
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 border-grid hover:bg-neon hover:text-black transition-colors"

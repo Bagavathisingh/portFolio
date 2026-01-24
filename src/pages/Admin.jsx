@@ -52,7 +52,7 @@ const Admin = () => {
         } else {
             setError(true);
             setAdminCode('');
-            // Shake effect or feedback
+
             setTimeout(() => setError(false), 500);
         }
     };

@@ -12,7 +12,7 @@ const Footer = () => {
                         End_
                     </h2>
                     <p className="font-mono text-gray-400 max-w-sm leading-relaxed">
-                        Developing digital solutions with precision, passion, and a touch of neon. Let's build something extraordinary together.
+                        Focused on building scalable web and mobile applications. Let's work together on your next project.
                     </p>
                 </div>
 
@@ -37,6 +37,8 @@ const Footer = () => {
                             { name: 'GitHub', url: 'https://github.com/Bagavathisingh' },
                             { name: 'LinkedIn', url: 'https://linkedin.com/in/bagavathi-singh' },
                             { name: 'Twitter', url: 'https://x.com/BagavathiSingh' },
+                            { name: 'Upwork', url: 'https://www.upwork.com/freelancers/~01d0a3304780aaa39a' },
+                            { name: 'Fiverr', url: 'https://www.fiverr.com/s/99Dmwmx' },
                             { name: 'Email', url: 'mailto:bagavathisingh5@gmail.com' }
                         ].map((item) => (
                             <li key={item.name}>
@@ -52,7 +54,7 @@ const Footer = () => {
             </div>
 
             <div className="border-t-grid pt-10 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-600 gap-4">
-                <span>© 2025 BAGAVATHISINGH. SYSTEM SECURE.</span>
+                <span>© 2026 BAGAVATHISINGH. All Rights Reserved.</span>
                 <span className="animate-pulse text-neon">● ONLINE</span>
             </div>
 
