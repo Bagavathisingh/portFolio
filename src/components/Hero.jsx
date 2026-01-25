@@ -6,33 +6,9 @@ const Hero = () => {
     return (
         <>
             <section id="home" className="min-h-[calc(100vh-4rem)] md:h-[calc(100vh-4rem)] flex flex-col relative">
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-12 border-b-grid md:overflow-hidden">
-                    <div className="md:col-span-4 border-r-grid relative bg-black/40 overflow-hidden group h-[calc(100vh-4rem)] md:h-full">
-                        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 1.1 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1.5 }}
-                            className="w-full h-full relative"
-                        >
-                            <img
-                                src="/hero-image.png"
-                                alt="Bagavathisingh"
-                                className="w-full h-full object-cover object-top grayscale opacity-40 group-hover:opacity-50 group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-20" />
-                        </motion.div>
-                        <div className="absolute bottom-10 left-10 z-30">
-                            <div className="p-4 border-l-2 border-neon bg-black/60 backdrop-blur-md">
-                                <p className="font-mono text-[10px] text-neon uppercase tracking-[0.2em] mb-1">PROFILE</p>
-                                <p className="font-heading font-bold text-xl tracking-widest uppercase text-white">BAGAVATHISINGH</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="md:col-span-5 p-8 md:p-12 border-r-grid flex flex-col justify-center relative">
+                <div className="flex-1 -z-10 grid grid-cols-1 md:grid-cols-12 border-b-grid md:overflow-hidden">
+                    <div className="md:col-span-9 p-8 md:p-12 border-r-grid flex flex-col justify-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] -z-10" />
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -42,6 +18,10 @@ const Hero = () => {
                                 <span className="w-1.5 h-1.5 bg-neon animate-pulse" />
                                 AVAILABLE FOR WORK
                             </div>
+
+                            <p className="font-mono text-neon text-sm uppercase tracking-[0.3em] mb-4">
+                                BAGAVATHISINGH
+                            </p>
 
                             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[0.85] tracking-tighter">
                                 FULL<br />STACK<br />DEV_
