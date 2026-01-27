@@ -26,9 +26,9 @@ const Navbar = () => {
           <div className="relative group">
             <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-neon border border-[#0a0a0a]" />
           </div>
-          <Link to="/" className="font-bold text-xl tracking-tighter hidden sm:block">BAGAVATHISINGH</Link>
-          <Link to="/" className="md:hidden font-bold text-xl tracking-tighter">BS</Link>
-          <div className="border-grid px-2 py-1 flex items-center gap-2">
+          <Link to="/" className="font-bold text-xl tracking-tighter hidden md:block">BAGAVATHISINGH</Link>
+          <Link to="/" className="font-bold text-xl tracking-tighter block md:hidden">BS</Link>
+          <div className="border-grid px-2 py-1 flex items-center gap-2 whitespace-nowrap">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
             <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400">OPEN FOR WORK</span>
           </div>

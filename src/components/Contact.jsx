@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, ArrowRight, Radio, Send, Mail, Linkedin } from 'lucide-react';
+import { Send, Mail, Linkedin } from 'lucide-react';
 import ContactModal from './ui/ContactModal';
 
 const Contact = () => {
@@ -10,71 +10,67 @@ const Contact = () => {
         <section id="contact" className="bg-[#050505] font-mono border-t border-white/5 relative overflow-hidden">
             {/* Contact Header */}
             <div className="flex border-b border-white/5 bg-white/[0.01]">
-                <div className="w-16 md:w-24 border-r border-white/5 flex items-center justify-center">
-                    <span className="rotate-90 text-[10px] font-bold tracking-[0.5em] text-neon uppercase whitespace-nowrap">MODULE_04</span>
-                </div>
-                <div className="flex-1 p-8 md:p-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
-                    <div>
-                        <span className="text-neon text-[10px] font-bold tracking-[0.3em] mb-4 block uppercase leading-none">Transmission_Hub</span>
-                        <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-none text-white">INITIATE<br />CONTACT_</h2>
-                    </div>
+                <div className="flex-1 p-8 md:p-12 lg:p-20">
+                    <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-none text-white">INITIATE<br />CONTACT_</h2>
                 </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row min-h-[600px]">
-                <div className="lg:w-1/3 border-r border-white/5 p-8 md:p-16 flex flex-col justify-between items-start">
-                    <div className="space-y-12">
-                        <div className="space-y-4">
-                            <h3 className="text-sm font-black text-white/40 uppercase tracking-widest">Transmissions:</h3>
-                            <p className="text-xs text-gray-500 uppercase tracking-widest leading-relaxed">
-                                Incoming messages are routed through private encrypted channels. Synchronous response latency varies by region.
-                            </p>
-                        </div>
+            <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+                {/* Left: Info */}
+                <div className="lg:w-1/3 p-8 md:p-12 lg:p-20 flex flex-col justify-between">
+                    <div className="space-y-8">
+                        <h3 className="text-xl font-black text-neon uppercase tracking-widest">Transmissions:</h3>
+                        <p className="text-sm text-gray-400 uppercase tracking-widest leading-relaxed max-w-sm">
+                            I am currently open to high-impact collaborations and architectural challenges. Expect a response within 24 standard hours.
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+                {/* Right: Interaction Modules */}
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 bg-white/5">
 
+                    {/* Direct Message */}
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-[#050505] p-12 flex flex-col justify-between hover:bg-neon transition-all duration-500 group relative overflow-hidden"
+                        className="bg-[#050505] p-12 flex flex-col justify-between hover:bg-neon transition-all duration-500 group relative min-h-[300px]"
                     >
-                        <div>
-                            <h3 className="text-4xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">DIRECT<br />MESSAGE</h3>
-                        </div>
+                        <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">DIRECT<br />MESSAGE</h3>
                         <div className="flex justify-end">
-                            <Send className="text-neon group-hover:!text-black transform group-hover:-translate-y-2 group-hover:translate-x-2 transition-transform" />
+                            <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-black transition-colors">
+                                <Send className="text-neon group-hover:!text-black transform group-hover:-translate-y-2 group-hover:translate-x-2 transition-transform" />
+                            </div>
                         </div>
                     </button>
 
-                    <div className="flex flex-col gap-px bg-white/10">
-                        <a
-                            href="mailto:bagavathisingh5@gmail.com"
-                            className="flex-1 bg-[#050505] p-12 flex flex-col justify-between hover:bg-white transition-all duration-500 group"
-                        >
-                            <div>
-                                <h3 className="text-3xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">EMAIL_LINK</h3>
-                            </div>
-                            <div className="flex justify-between items-end">
-                                <span className="text-[8px] text-gray-500 group-hover:!text-black/40 uppercase tracking-widest">bagavathisingh5@gmail.com</span>
+                    {/* Email */}
+                    <a
+                        href="mailto:bagavathisingh5@gmail.com"
+                        className="bg-[#050505] p-12 flex flex-col justify-between hover:bg-white transition-all duration-500 group min-h-[300px]"
+                    >
+                        <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">EMAIL<br />UPLINK</h3>
+                        <div className="flex justify-between items-end">
+                            <span className="text-[10px] text-gray-500 group-hover:!text-black uppercase tracking-widest truncate max-w-[150px]">bagavathisingh5@gmail.com</span>
+                            <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-black transition-colors">
                                 <Mail className="text-gray-400 group-hover:!text-black" size={20} />
                             </div>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/bagavathi-singh"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 bg-[#050505] p-12 flex flex-col justify-between hover:bg-white transition-all duration-500 group border-t border-white/5"
-                        >
-                            <div>
-                                <h3 className="text-3xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">LINKEDIN_SYS</h3>
-                            </div>
-                            <div className="flex justify-between items-end">
-                                <span className="text-[8px] text-gray-500 group-hover:!text-black/40 uppercase tracking-widest">Connect_Professional</span>
+                        </div>
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a
+                        href="https://www.linkedin.com/in/bagavathi-singh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#050505] p-12 flex flex-col justify-between hover:bg-white transition-all duration-500 group min-h-[300px]"
+                    >
+                        <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-white group-hover:!text-black leading-none uppercase">LINKEDIN<br />SYNC</h3>
+                        <div className="flex justify-between items-end">
+                            <span className="text-[10px] text-gray-500 group-hover:!text-black uppercase tracking-widest">PRO_CONNECT</span>
+                            <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-black transition-colors">
                                 <Linkedin className="text-gray-400 group-hover:!text-black" size={20} />
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
