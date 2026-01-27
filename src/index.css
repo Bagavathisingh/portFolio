@@ -6,11 +6,11 @@
 @import "@fontsource/jetbrains-mono/500.css";
 
 @theme {
-    --color-blueprint-bg: #0a0a0a;
-    --color-blueprint-border: #262626;
-    --color-blueprint-text: #e5e5e5;
-    --color-blueprint-neon: #ccff00;
-    --color-blueprint-sub: #a1a1aa;
+    --color-bg: #050505;
+    --color-grid: #1a1a1a;
+    --color-text: #e5e5e5;
+    --color-neon: #ccff00;
+    --color-sub: #a1a1aa;
 }
 
 :root {
@@ -23,8 +23,8 @@ html {
 }
 
 body {
-    background-color: var(--color-blueprint-bg);
-    color: var(--color-blueprint-text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: var(--font-mono);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -63,38 +63,38 @@ h6 {
 }
 
 .border-grid {
-    border: 1px solid var(--color-blueprint-border);
+    border: 1px solid var(--color-grid);
 }
 
 .border-b-grid {
-    border-bottom: 1px solid var(--color-blueprint-border);
+    border-bottom: 1px solid var(--color-grid);
 }
 
 .border-t-grid {
-    border-top: 1px solid var(--color-blueprint-border);
+    border-top: 1px solid var(--color-grid);
 }
 
 .border-l-grid {
-    border-left: 1px solid var(--color-blueprint-border);
+    border-left: 1px solid var(--color-grid);
 }
 
 .border-r-grid {
-    border-right: 1px solid var(--color-blueprint-border);
+    border-right: 1px solid var(--color-grid);
 }
 
 .text-neon {
-    color: var(--color-blueprint-neon);
+    color: var(--color-neon);
 }
 
 .bg-neon {
-    background-color: var(--color-blueprint-neon);
+    background-color: var(--color-neon);
     color: black;
 }
 
 .hover-neon:hover {
-    background-color: var(--color-blueprint-neon);
+    background-color: var(--color-neon);
     color: black;
-    border-color: var(--color-blueprint-neon);
+    border-color: var(--color-neon);
 }
 
 ::-webkit-scrollbar {
@@ -102,21 +102,21 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-blueprint-bg);
-    border-left: 1px solid var(--color-blueprint-border);
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-grid);
 }
 
 ::-webkit-scrollbar-thumb {
     background: #333;
-    border: 1px solid var(--color-blueprint-bg);
+    border: 1px solid var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-blueprint-neon);
+    background: var(--color-neon);
 }
 
 .text-stroke {
-    -webkit-text-stroke: 1px var(--color-blueprint-text);
+    -webkit-text-stroke: 1px var(--color-text);
 }
 
 .writing-vertical-rl {

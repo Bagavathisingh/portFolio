@@ -1,84 +1,84 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDownRight, Globe, Database, Smartphone, ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <>
-            <section id="home" className="min-h-[calc(100vh-4rem)] flex flex-col relative overflow-hidden">
-                <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 border-b-grid">
+        <section id="home" className="relative min-h-screen bg-[#050505] text-white p-10 overflow-hidden flex flex-col font-mono ">
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute inset-4 border border-white/5" />
+                <div className="absolute top-4 left-4 w-24 h-24 border-t-2 border-l-2 border-neon" />
+                <div className="absolute bottom-4 right-4 w-24 h-24 border-b-2 border-r-2 border-neon" />
+            </div>
 
-                    <div className="hidden lg:flex lg:col-span-1 border-r-grid flex-col justify-end p-6 py-12">
-                        <div className="rotate-180 [writing-mode:vertical-lr] flex items-center gap-4">
-                            <span className="font-mono text-[10px] text-neon uppercase tracking-[0.3em]">Developer Portfolio</span>
-                            <div className="w-[1px] h-20 bg-grid-pattern opacity-30" />
-                            <h2 className="font-bold text-2xl tracking-tighter text-white">BAGAVATHI<span className="text-neon">SINGH</span></h2>
+            <div className="flex-1 flex flex-col lg:flex-row relative z-10 mx-4 mt-4 mb-4">
+                <div className="lg:w-[400px] border-r border-white/5 p-8 lg:p-12 flex flex-col justify-center bg-black/40 backdrop-blur-sm">
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <h2 className="text-4xl font-black tracking-tighter leading-none mb-8 text-white">
+                            BAGAVATHI<br />
+                            <span className="text-neon italic">SINGH</span>
+                        </h2>
+                        <p className="text-sm text-gray-400 font-medium leading-relaxed max-w-[280px]">
+                            Full stack engineer building structural digital experiences. Focus on performance, scalability, and technical elegance.
+                        </p>
+                    </motion.div>
+                </div>
+
+                <div className="flex-1 flex flex-col relative overflow-hidden bg-grid-pattern opacity-95">
+                    <div className="flex-1 p-8 lg:p-20 flex flex-col justify-center relative">
+                        <div className="relative">
+                            <motion.h1
+                                initial={{ y: 60, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1] }}
+                                className="text-[10vw] lg:text-[11vw] font-black leading-[0.75] tracking-tighter uppercase mb-12"
+                            >
+                                BUILD<br />
+                                <span className="text-transparent text-stroke opacity-30">BEYOND</span><br />
+                                <span className="text-white">LIMITS_</span>
+                            </motion.h1>
+
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.6 }}
+                                className="flex flex-wrap gap-12"
+                            >
+                                <a href="#projects" className="group flex flex-col gap-2">
+                                    <div className="flex items-center gap-4">
+                                        <span className="text-neon font-black tracking-widest uppercase text-xs">View My Work</span>
+                                        <ArrowRight className="text-neon transform group-hover:translate-x-3 transition-transform" size={20} />
+                                    </div>
+                                    <div className="h-[2px] w-0 group-hover:w-full bg-neon transition-all duration-500" />
+                                </a>
+                                <a href="#contact" className="group flex flex-col gap-2 opacity-50 hover:opacity-100 transition-opacity">
+                                    <span className="text-white font-black tracking-widest uppercase text-xs">Contact Me</span>
+                                    <div className="h-[2px] w-0 group-hover:w-full bg-white transition-all duration-500" />
+                                </a>
+                            </motion.div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div className="lg:col-span-7 border-r-grid p-8 md:p-16 flex flex-col justify-center relative">
+            <div className="h-8 border-t border-white/10 flex items-center px-8 bg-black">
+                <div className="flex items-center gap-8 w-full">
+                    <div className="flex-1 overflow-hidden">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
+                            animate={{ x: [0, -1000] }}
+                            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+                            className="whitespace-nowrap font-mono text-[8px] text-gray-700 tracking-[0.5em] uppercase"
                         >
-                            <div className="inline-flex items-center gap-3 mb-10">
-                                <span className="w-8 h-[1px] bg-neon" />
-                                <span className="font-mono text-[11px] text-neon uppercase tracking-[0.4em]">Full Stack Developer</span>
-                            </div>
-
-                            <h1 className="text-7xl md:text-8xl lg:text-[100px] font-black leading-[0.9] tracking-tighter mb-10">
-                                DEVELOPING<br />
-                                <span className="text-neutral-500 italic font-normal">FOR THE</span><br />
-                                WEB_
-                            </h1>
-
-                            <div className="max-w-md space-y-8">
-                                <p className="text-lg text-gray-400 leading-relaxed font-mono">
-                                    I focus on building functional web applications and learning new ways to solve technical problems efficiently.
-                                </p>
-
-                                <div className="flex items-center gap-6">
-                                    <a href="#contact" className="group relative px-8 py-4 bg-neon text-black font-bold uppercase tracking-wider hover:bg-white transition-colors">
-                                        Get in touch
-                                        <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </a>
-                                </div>
-                            </div>
+                            Deploying Scalable Systems // Integrated AI Modules // Next.js Performance Optimization // React Native Mobile Architecture //
                         </motion.div>
                     </div>
-
-                    <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
-                        {[
-                            { icon: Globe, title: "Web Apps", desc: "Building with Next.js & React" },
-                            { icon: Database, title: "Backend", desc: "Server logic with Node.js" },
-                            { icon: Smartphone, title: "Mobile", desc: "Developing Flutter apps" },
-                            { icon: MessageSquare, title: "AI Work", desc: "Exploring LLM integrations" }
-                        ].map((service, i) => (
-                            <div key={i} className="p-8 border-b-grid border-white/5 hover:bg-white/[0.01] transition-colors group cursor-default">
-                                <div className="flex items-start justify-between mb-4">
-                                    <service.icon className="w-8 h-8 text-neutral-700 group-hover:text-neon transition-colors" />
-                                </div>
-                                <h3 className="font-bold text-xl mb-1 text-neutral-200">{service.title}</h3>
-                                <p className="text-xs font-mono text-neutral-500 uppercase">{service.desc}</p>
-                            </div>
-                        ))}
-                    </div>
                 </div>
-            </section>
-
-            <div className="overflow-hidden border-b-grid bg-neon text-black py-4">
-                <motion.div
-                    animate={{ x: [0, -1000] }}
-                    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                    className="whitespace-nowrap flex gap-8 font-mono text-lg font-bold"
-                >
-                    {Array(10).fill("AVAILABLE FOR FREELANCE WORK • CUSTOM AI CHATBOTS • MODERN WEB SOLUTIONS • ").map((text, i) => (
-                        <span key={i}>{text}</span>
-                    ))}
-                </motion.div>
             </div>
-        </>
+        </section>
     );
 };
 
